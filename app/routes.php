@@ -11,7 +11,18 @@
 |
 */
 
-Route::get('/', function()
+Route::get('/'     , ['as' => 'home.index'  , 'uses' => 'HomeController@index']);
+/*
+Route:: get( '/' , function()
 {
-	return View::make('home.index');
+	
+	$beside = new Beside;
+	$beside->event_name = 'event3' ;
+	$beside->organization = 'Merry Monarc' ;
+//	$event->timestamps();
+	$beside->save();
+//	$event = Event::find( 1 );
+	return $beside->id;
 });
+*/
+Route::get('besides/{id}'     , ['as' => 'beside.show'   , 'uses' => 'BesidesController@show']);

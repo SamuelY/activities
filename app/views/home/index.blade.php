@@ -5,29 +5,28 @@
 @stop
 
 @section('content')
+	@foreach($besides as $beside)
 					<div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
                             <img src="http://placehold.it/320x150" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">$24.99</h4>
-                                <h4><a href="#">First Product</a>
+                            <!--    <h4 class="pull-right">$24.99</h4>-->
+                                <h4><a href="{{{ route('beside.show', $beside->id) }}} ">{{{ $beside->event_name }}}</a>
                                 </h4>
-                                <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
+                                <p>{{{$beside->organization}}}</p>
                             </div>
                             <div class="ratings">
-                                <p class="pull-right">15 reviews</p>
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                </p>
+							    <span class="browse" ap-tooltip="瀏覽人次" data-placement="bottom">
+									<p class="pull-left"><i class="icon-eye-open"></i>{{{$beside->browse}}}</p>
+								</span>
+								<span class="bookmark" ap-tooltip="收藏人數" data-placement="bottom">
+									<p class="pull-left"><i class="icon-bookmark"></i>{{{$beside->bookmark}}}</p>
+								</span>
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-sm-4 col-lg-4 col-md-4">
+    @endforeach
+ <!--                   <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
                             <img src="http://placehold.it/320x150" alt="">
                             <div class="caption">
@@ -37,7 +36,7 @@
                                 <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             </div>
                             <div class="ratings">
-                                <p class="pull-right">12 reviews</p>
+                                <p class="pull-right"><i class="icon-eye-open"></i>12</p>
                                 <p>
                                     <span class="glyphicon glyphicon-star"></span>
                                     <span class="glyphicon glyphicon-star"></span>
@@ -59,7 +58,7 @@
                                 <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             </div>
                             <div class="ratings">
-                                <p class="pull-right">31 reviews</p>
+                                <p class="pull-right"><i class="icon-eye-open"></i>31</p>
                                 <p>
                                     <span class="glyphicon glyphicon-star"></span>
                                     <span class="glyphicon glyphicon-star"></span>
@@ -81,7 +80,7 @@
                                 <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             </div>
                             <div class="ratings">
-                                <p class="pull-right">6 reviews</p>
+                                <p class="pull-right"><i class="icon-eye-open"></i>6</p>
                                 <p>
                                     <span class="glyphicon glyphicon-star"></span>
                                     <span class="glyphicon glyphicon-star"></span>
@@ -103,7 +102,7 @@
                                 <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             </div>
                             <div class="ratings">
-                                <p class="pull-right">18 reviews</p>
+                                <p class="pull-right"><i class="icon-eye-open"></i>18</p>
                                 <p>
                                     <span class="glyphicon glyphicon-star"></span>
                                     <span class="glyphicon glyphicon-star"></span>
@@ -114,6 +113,7 @@
                             </div>
                         </div>
                     </div>
+-->
 <!--
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <h4><a href="#">Like this template?</a>
