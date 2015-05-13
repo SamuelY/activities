@@ -46,10 +46,10 @@ class BesidesController extends \BaseController {
         $beside = Beside::find($id);
 		$beside->browse = $beside->browse + 1;
 		$beside->save();
-		$besides = Beside::all();
-        $data = compact('besides');
+//		$besides = Beside::all();
+        $data = compact('beside');
         
-		return View::make('home.index',  $data);
+		return View::make('detail.index',  $data);
 	}
 
 

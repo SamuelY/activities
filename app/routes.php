@@ -26,3 +26,5 @@ Route:: get( '/' , function()
 });
 */
 Route::get('besides/{id}'     , ['as' => 'beside.show'   , 'uses' => 'BesidesController@show']);
+
+Route::post('comments'      , ['as' => 'comments.store'  , 'uses' => 'CommentsController@store']);

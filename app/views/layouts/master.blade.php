@@ -80,7 +80,7 @@
             </div>
 -->
             <div class="col-md-20">
-
+                @section('carousel')
                 <div class="row carousel-holder">
 
                     <div class="col-md-12">
@@ -111,7 +111,7 @@
                     </div>
 
                 </div>
-
+                @show
                 <div class="row">
 					@yield('content')
 <!--
