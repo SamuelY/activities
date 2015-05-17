@@ -28,3 +28,13 @@ Route:: get( '/' , function()
 Route::get('besides/{id}'     , ['as' => 'beside.show'   , 'uses' => 'BesidesController@show']);
 
 Route::post('comments'      , ['as' => 'comments.store'  , 'uses' => 'CommentsController@store']);
+
+Route::get('register'      , ['as' => 'register.index'  , 'uses' => 'RegisterController@index']);
+
+Route::post('register/create'      , ['as' => 'register.create'  , 'uses' => 'RegisterController@create']);
+
+Route::get('login'      , ['as' => 'login.index'  , 'uses' => 'LoginController@index']);
+
+Route::post('login/auth'      , ['as' => 'login.auth'  , 'uses' => 'LoginController@auth']);
+
+Route::get('logout'      , ['as' => 'logout'  , 'uses' => 'LoginController@logout']);
