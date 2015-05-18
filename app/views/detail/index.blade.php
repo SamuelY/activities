@@ -28,7 +28,7 @@
     <div class="well">
         <h4>回覆文章</h4>
         
-       @include('partials.notifications')
+       @include('partials.message')
         
         {{ Form::open(['route' => 'comments.store', 'method' => 'POST', 'class' => 'horizontal-form', 'role' => 'form']) }}
             <div class="form-group{{ $errors->first('name', ' has-error')}}">

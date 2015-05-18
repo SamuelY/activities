@@ -38,3 +38,7 @@ Route::get('login'      , ['as' => 'login.index'  , 'uses' => 'LoginController@i
 Route::post('login/auth'      , ['as' => 'login.auth'  , 'uses' => 'LoginController@auth']);
 
 Route::get('logout'      , ['as' => 'logout'  , 'uses' => 'LoginController@logout']);
+
+Route::get('beside'      , ['as' => 'beside.index'  , 'uses' => 'BesidesController@index']);
+
+Route::post('beside/create'      , ['as' => 'beside.create'  , 'uses' => 'BesidesController@create']);

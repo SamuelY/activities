@@ -9,7 +9,7 @@ class BesidesController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+		return View::make('beside.index');
 	}
 
 
@@ -20,7 +20,16 @@ class BesidesController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+		$beside = new Beside;
+        $beside->event_name = Input::get('event_name');
+		$beside->event_introduce = Input::get('event_introduce');
+		$beside->organization = Input::get('organization');  
+		$fileExtension = Input::file('uploadfile')->guessExtension();
+		$fileName = Input::file('uploadfile')->getFileName();
+		$beside->image_path = '/upload/'.$fileName.'.'.$fileExtension;  
+		Input::file('uploadfile')->move(public_path().'/upload/',$beside->image_path);
+		$beside->save();
+		return View::make('beside.message',  ['message'=>'建立活動成功']);
 	}
 
 
@@ -29,9 +38,8 @@ class BesidesController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function upload()
 	{
-		//
 	}
 
 

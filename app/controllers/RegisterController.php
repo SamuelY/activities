@@ -21,10 +21,10 @@ class RegisterController extends \BaseController {
         if (!strcmp(Input::get('password'),Input::get('confirm_password'))) {
 			$register->password = Hash::make(Input::get('password'));
 			$register->save();
-			return View::make('register.message', ['message'=>'註冊成功']);
+			return View::make('beside.message', ['message'=>'註冊成功']);
 		}
 			
-        return View::make('register.message', ['message'=>'發生錯誤']);
+        return View::make('beside.message', ['message'=>'發生錯誤']);
 
 		
 	}

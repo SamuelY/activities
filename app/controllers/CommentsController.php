@@ -26,7 +26,7 @@ class CommentsController extends \BaseController {
         
         Comment::create($inputs);
 
-		return Redirect::route('beside.show', $inputs['beside_id'])->with('success', '回覆文章成功');
+		return Redirect::route('beside.show', $inputs['beside_id'])->with('message', '回覆文章成功');
 	}
 
 }

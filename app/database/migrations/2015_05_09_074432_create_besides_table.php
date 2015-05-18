@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateEventsTable extends Migration {
+class CreateBesidesTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -20,6 +20,7 @@ class CreateEventsTable extends Migration {
 			$table->integer('browse');
 			$table->integer('bookmark');
 			$table->string('organization');
+			$table->string('image_path');
 			$table->timestamps();
 		});
 	}

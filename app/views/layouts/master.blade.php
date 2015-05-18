@@ -66,7 +66,7 @@
                     </li>
 					@if (Auth::check())
 					<li>
-                        <a href="#">建立活動</a>
+                        <a href="{{{route('beside.index')}}}">建立活動</a>
                     </li>
 					@endif
                 </ul>
